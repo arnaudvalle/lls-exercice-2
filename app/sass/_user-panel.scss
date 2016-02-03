@@ -1,0 +1,51 @@
+/*
+    USER PANEL DETAILS
+*/
+
+.user-panel {
+    background-color: $color-primary;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 2em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    width: 50%;
+    z-index: 200;
+
+    @media (max-width: $screen-xs) {
+        width: 100%;
+    }
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    &__avatar {
+        width: 100%;
+    }
+
+    &__stat {
+        border: 1px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1.25em;
+        font-weight: bold;
+        padding: 1em;
+        text-align: center;
+
+        &--up {
+            background-color: green;
+        }
+
+        &--mid {
+            background-color: orange;
+        }
+
+        &--down {
+            background-color: red;
+        }
+    }
+}

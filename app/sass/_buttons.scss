@@ -1,0 +1,115 @@
+.btn {
+    background-image: none;
+    background-color: #fff;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.btn + .btn {
+    margin-left: 1em;
+}
+
+.btn:focus,
+.btn:active:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.btn:hover:not([disabled]),
+.btn:focus {
+    color: $color-secondary;
+    text-decoration: none;
+}
+
+.btn:active {
+    background-image: none;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    outline: 0;
+    top: 1px;
+}
+
+.btn[disabled] {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.btn--lg {
+    font-size: 16px;
+    padding: 12px 24px;
+    text-transform: uppercase;
+}
+
+/* EFFET BOUTON */
+
+.btn--effect {
+    overflow: hidden;
+	transition: border-color 0.3s, color 0.3s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+    &::before {
+    	content: '';
+    	height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+    	transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    	transform-origin: 0% 100%;
+    	transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+        width: 150%;
+        z-index: -1;
+    }
+
+    &:hover:not([disabled])::before {
+    	opacity: 1;
+    	transform: rotate3d(0, 0, 1, 0deg);
+    	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+}
+
+/* BOUTON PRIMAIRE */
+
+.btn--primary {
+    background-color: #fff;
+    border: 2px solid $color-secondary;
+
+    &:hover:not([disabled]) {
+        color: #fff;
+    	border-color: $color-primary;
+
+        &::before {
+            background-color: $color-primary;
+        }
+    }
+}
+
+/* BOUTON SECONDAIRE */
+
+.btn--secondary {
+    background-color: $color-secondary;
+    border: 2px solid #fff;
+    color: #fff;
+
+    &:hover:not([disabled]) {
+        color: $color-secondary;
+    	border-color: #fff;
+
+        &::before {
+            background-color: #fff;
+        }
+    }
+}

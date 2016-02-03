@@ -1,0 +1,11 @@
+{
+    "eleves": [
+        { "id": 1, "prenom": "Ned", "nom": "Stark", "sexe": "m", "moyenne": 15, "remarques": "Un peu tête en l'air" },
+        { "id": 2, "prenom": "Arya", "nom": "Stark", "sexe": "f", "moyenne": 8, "remarques": "Rebelle" },
+        { "id": 3, "prenom": "Jon", "nom": "Snow", "sexe": "m", "moyenne": 14, "remarques": "Problèmes familiaux" },
+        { "id": 4, "prenom": "Tyrion", "nom": "Lannister", "sexe": "m", "moyenne": 18, "remarques": "Le cerveau de la famille" },
+        { "id": 5, "prenom": "Jaime", "nom": "Lannister", "sexe": "m", "moyenne": 11, "remarques": "Fait tout comme sa jumelle" },
+        { "id": 6, "prenom": "Cersei", "nom": "Lannister", "sexe": "f", "moyenne": 11, "remarques": "Fait tout comme son jumeau" },
+        { "id": 7, "prenom": "Joffrey", "nom": "Baratheon", "sexe": "m", "moyenne": 5, "remarques": "Colérique" }
+    ]
+}
